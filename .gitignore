@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------------------
+# Power BI / Analysis Services local artifacts
+# ---------------------------------------------------------------------------
+*.pbix
+*.pbit
+.pbi/
+**/cache.abf
+*.abf
+**/.pbi/
+**/*.SemanticModel/.pbi/
+
+# ---------------------------------------------------------------------------
+# Large / regenerable data
+#   The 9 raw Olist CSVs (≈121 MB) are NOT redistributed here.
+#   Download them from Kaggle:
+#   https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+#   Large model-output tables are attached to the GitHub Release instead.
+# ---------------------------------------------------------------------------
+literature/*.csv
+data/snapshots/
+data/models/*.pkl
+data/models/*.json
+**/Customer_Churn_Scores.csv
+*.zip
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# OS / editor
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---------------------------------------------------------------------------
+# Internal working notes (not part of the portfolio)
+# ---------------------------------------------------------------------------
+outputs/portfolio/deck_projects/
+outputs/portfolio/H009_*interview*.md
+outputs/upload_workup/_copy_log.tsv
