@@ -1,8 +1,11 @@
 # ---------------------------------------------------------------------------
-# Power BI / Analysis Services local artifacts
+# Power BI / Analysis Services local artifacts (except dashboards/)
 # ---------------------------------------------------------------------------
 *.pbix
 *.pbit
+!.pbix
+dashboards/*.pbix
+dashboards/*.pbit
 .pbi/
 **/cache.abf
 *.abf
