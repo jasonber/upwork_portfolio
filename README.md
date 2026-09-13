@@ -1,5 +1,7 @@
 # Churn & Retention Analytics — Olist Brazilian E-Commerce
 
+> **Demo / portfolio project.** This is an end-to-end analytics case study built on a public Kaggle dataset for portfolio demonstration purposes — not a real client engagement.
+
 An end-to-end analytics case study on **93,358 customers**: diagnose where a
 marketplace leaks revenue, find out **why**, quantify **how much** an
 intervention is worth, and rank **who** to act on first.
@@ -188,3 +190,5 @@ python scripts/build_portfolio_reports_en.py   # rebuilds the two English PDF re
 
 *Dataset: Brazilian E-Commerce Public Dataset by Olist (CC BY-NC-SA 4.0) —
 not redistributed in this repository. Code: MIT.*
+
+*Disclaimer: This project uses a synthetic public dataset from Kaggle. All findings, metrics and business conclusions are illustrative only and do not reflect the performance of any real company or platform.*
