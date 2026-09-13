@@ -64,10 +64,11 @@ SQL ETL            →  7-node funnel  →  root cause  →  causal  →  predic
 
 ## 3b. How AI was used
 
-**Human-led method, AI-assisted execution.** The business problem, the analysis framework, the choice
-of method and the validation of every result are mine. AI was used as an instrument for
-implementation and drafting — on tasks where its output could be checked — and every number in the
-report is either reproducible from the code or reconciled by an automated gate before it ships.
+**Human-led method, AI-assisted execution.** The business problem, the analysis framework,
+the choice of method, the deck storyline and the final review of every result are mine.
+AI was used as an instrument for implementation and drafting — on tasks where its output
+could be checked — and every number in the report is either reproducible from the code or
+reconciled by an automated gate before it ships.
 
 **1 · LLM-assisted text analysis at scale.** 11,424 Portuguese low-score reviews were analysed in
 batches through an OpenAI-compatible endpoint (`scripts/h008_nlp_llm.py`), extracting six fields per
@@ -109,7 +110,9 @@ published without a human having read every figure against its source.
 .
 ├── sql/            SQL equivalents of the core pipeline (wide table, funnel, cohort, caliber, uplift)
 ├── scripts/        Python pipeline — see scripts/README.md for run order
-├── dashboard/      Power BI .pbip project + its CSV tables — see dashboard/README.md
+├── dashboards/     Power BI .pbix dashboard — `olist_demo_dashboard.pbix`
+├── assets/dashboard/
+│                   10 dashboard page screenshots (PNG, 6474 × 3516 px)
 ├── reports/        Finished deliverables (PDF)
 ├── assets/         10 dashboard screenshots + 12 report charts
 └── docs/           analysis roadmap, data dictionary, dashboard guide
@@ -121,14 +124,15 @@ published without a human having read every figure against its source.
 
 | File | What it is |
 |------|-----------|
+| `dashboards/olist_demo_dashboard.pbix` | Full Power BI dashboard — 10 pages, data model, DAX measures |
 | `reports/01_consulting_deck_EN.pdf` | 29-page consulting-style deck (EN) — SCQA storyline, 13 native charts, speaker notes |
 | `reports/02_churn_model_card_EN.pdf` | 4-page model card — data, 38 features, label-leakage audit, validation, threshold policy, SHAP drivers, monitoring, limitations |
 | `reports/03_root_cause_and_causal_brief_EN.pdf` | 4-page evidence brief — NLP review themes, delivery dose-response, four-estimator causal cross-check, documented negative results |
 | `reports/04_dashboard_walkthrough_EN.pdf` | All ten Power BI pages in one 10-page PDF |
-| `assets/dashboard/*.png` | 10 dashboard pages, 6,474 × 3,516 px |
+| `assets/dashboard/*.png` | 10 dashboard page screenshots, 6,474 × 3,516 px |
 | `assets/charts/*.png` | 12 report charts (funnel, cohort, SHAP, NLP, ROI, model eval) |
 
-**Live dashboard:** Power BI Service link published with the portfolio entry.
+**Live dashboard:** `dashboards/olist_demo_dashboard.pbix` can be opened directly in Power BI Desktop; a Power BI Service link is published with the portfolio entry.
 
 ---
 
@@ -177,7 +181,7 @@ python scripts/caliber_gate.py                 # assertion lock: fails the build
 python scripts/build_portfolio_reports_en.py   # rebuilds the two English PDF reports
 
 # 4. open the dashboard
-#    dashboard/olist_demo_dashboard.pbip  (Power BI Desktop)
+#    dashboards/olist_demo_dashboard.pbix  (Power BI Desktop)
 ```
 
 ---
